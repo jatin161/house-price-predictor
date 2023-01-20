@@ -66,7 +66,7 @@ s1stFlrSF = np.log(st.slider('1stFlrSF: First Floor square feet', 1, 5000, 1))/8
 data=df_creator(GrLivArea,OverallQuality,Neighborhood,GarageCars,KitchenQual,s1stFlrSF,base)
 
 
-print(data.to_clipboard())
+# print(data.to_clipboard())
 
 if (st.button("Predit Value of The house") ):
     value=round(np.exp(model.predict(data[:1]))[0])
